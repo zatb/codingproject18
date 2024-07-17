@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './styles/Toolbar.css';
 import RateMovieButton from './components/RateMovieButton';
 import MovieSelector from './components/MovieSelector';
 import UploadButton from './components/UploadButton';

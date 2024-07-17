@@ -33,7 +33,7 @@ const RateMovieButton = ({ movie }) => {
         ))}
       </div>
       <button onClick={handleSubmit} className="submit-button">Submit Rating</button>
-      {submitted && <p className="black-text">Rating submitted!</p>}
+      {submitted && <p className="black-text">Rating submitted</p>}
     </div>
   );
 };
