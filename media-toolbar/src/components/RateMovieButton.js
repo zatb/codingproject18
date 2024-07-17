@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import './RateMovieButton.css';
 
 const RateMovieButton = ({ movie }) => {
   const [rating, setRating] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleRating = (rate) => {
     setRating(rate);
+  };
+
+  const handleSubmit = () => {
+    setSubmitted(true);
+    setRating(0);
   };
 
   useEffect(() => {
@@ -25,6 +32,8 @@ const RateMovieButton = ({ movie }) => {
           </span>
         ))}
       </div>
+      <button onClick={handleSubmit} className="submit-button">Submit Rating</button>
+      {submitted && <p className="black-text">Rating submitted!</p>}
     </div>
   );
 };
